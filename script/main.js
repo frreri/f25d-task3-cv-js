@@ -9,7 +9,7 @@ const hiddenSections = [projectSection, resumeSection, contactSection];
 
 // Importing and running my resume script - Written by myself
 import { generateResume } from './resume.js';
-generateResume('../data/resume.json');
+generateResume('./data/resume.json');
 
 // Importing and running my Intersection Observer API functionality
 // Based on 3rd party code as requested in task - see intersection.js for more info
