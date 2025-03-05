@@ -1,27 +1,8 @@
 'use strict';
 
+import { getJsonData, createElement } from './helperFunctions.js';
+
 const generateResume = async jsonFile => {
-  const getJsonData = async file => {
-    try {
-      const result = await fetch(file);
-      if (result.ok) {
-        return await result.json();
-      } else {
-        throw Error('Error reading JSON-file');
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  // created a function for element creation, as i was typing alot of same things over and over
-  const createElement = (tag, className, text) => {
-    const element = document.createElement(tag);
-    if (className) element.classList.add(className);
-    if (text) element.textContent = text;
-    return element;
-  };
-
   const displayResume = resume => {
     const resumeName = document.getElementById('resume-name');
     const resumeTitle = document.getElementById('resume-title');
