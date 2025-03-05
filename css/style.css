@@ -101,12 +101,6 @@ a:visited {
   background-color: var(--main-color);
 }
 
-.nav-open a:link,
-.nav-open a:visited {
-  color: var(--main-background-color);
-  background-color: var(--main-color);
-}
-
 /* PROFILE SECTION */
 .profile-picture-section {
   grid-column: 1;
@@ -422,6 +416,12 @@ a:visited {
   .nav-bar {
     font-size: 1.3rem;
     margin-bottom: 1rem;
+  }
+
+  .nav-bar a:hover,
+  .nav-bar a:active {
+    color: unset;
+    background-color: unset;
   }
 
   .nav-fixed {
