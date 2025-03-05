@@ -1,0 +1,87 @@
+{
+  "name": "Fredrik Eriksson",
+  "title": "Frontend Developer",
+  "summary": "Over 10 years of experience in various roles in the IT and telecom industry, including quality assurance and testing, application support, employee training, and customer service. Currently studying Frontend Development with a focus on React.",
+  "jobs": [
+    {
+      "company": "Tele2 Sverige AB",
+      "duration": "Full-time 10 yrs",
+      "roles": [
+        {
+          "role": "Quality Assurance Manager",
+          "duration": "Mar 2022 - Aug 2024",
+          "roleDescriptionList": [
+            "Testing, test planning and test management",
+            "Responsible for quality in various development projects",
+            "Created test automation tools with Python and JavaScript used in my team"
+          ]
+        },
+        {
+          "role": "Support Technician",
+          "duration": "Jan 2017 - Mar 2022",
+          "roleDescriptionList": [
+            "Provided Application Support for the organization",
+            "User Acceptance Testing mainly focusing on the main CRM system",
+            "Created some GUI tools with Python to make some API interactions easier for my team"
+          ]
+        },
+        {
+          "role": "Second Line Support",
+          "duration": "Aug 2014 - Jan 2017",
+          "roleDescriptionList": [
+            "Second line support for our SME business customer service",
+            "Trainer/teacher for other employees in various products and internal systems"
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Teleperformance",
+      "duration": "Full-time 4 yrs 10 mo",
+      "roles": [
+        {
+          "role": "Second Line Support",
+          "duration": "Apr 2011 - Aug 2014",
+          "roleDescriptionList": [
+            "Specialized customer service for SME business customers"
+          ]
+        },
+        {
+          "role": "First Line Support",
+          "duration": "Nov 2009 - Apr 2011",
+          "roleDescriptionList": [
+            "First line customer service for SME business customers"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Yrkeshögskolan i Borås",
+      "education": "Frontend Developer React",
+      "duration": "Jan 2025 - Ongoing",
+      "descriptionList": [
+        "Higher Vocational Education in Frontend web development with React"
+      ]
+    },
+    {
+      "school": "Staffangymnasiet",
+      "education": "Electricity Programme, Computer Technology",
+      "duration": "2006 - 2009",
+      "descriptionList": [
+        "Activities: Student safety representative",
+        "Focus: CISCO, Network- and System administration"
+      ]
+    }
+  ],
+  "skills": [
+    "HTML, CSS, JavaScript, Python",
+    "Quality Assurance",
+    "Test Planning and Management",
+    "Application Support",
+    "Troubleshooting",
+    "Customer Service",
+    "Employee Training"
+  ]
+}

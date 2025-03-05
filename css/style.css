@@ -1,0 +1,477 @@
+:root {
+  --main-color: #1864ab;
+  --main-background-color: #f8f9fa;
+  --fixed-nav-background-color: rgba(233, 236, 239, 0.8);
+  /* secondary background color added in preparation for automatic dark mode */
+  /* this will be used to have a lighter background on projects cards for example */
+  --secondary-background-color: #f8f9fa;
+  --main-text-color: #343a40;
+  --main-border-radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Setting document font-size so that i can use rem based on this.
+   Then setting a smaller font-size in media query for smaller screens will scale everything with a rem size down automatically */
+html {
+  font-size: 18px;
+}
+
+/* Setting the body to be a grid container to reduce number of wrappers and indentation
+   Learned this is okay in codecademy study material */
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* writing rows explicitly as it is shorter with 2 rows than repeat() */
+  row-gap: 64px;
+  column-gap: 32px;
+
+  width: 70vw;
+  max-width: 1200px;
+  margin: 1rem auto;
+
+  font-family: 'Inter';
+  color: var(--main-text-color);
+
+  background-color: var(--main-background-color);
+  /* adding a background image that when repeated will look like a cool pattern (as used in my profile image) */
+  /* the linear gradient is added before as a transparent filter to make the pattern stand out less */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url('../img/tile-neutral.png');
+  background-size: 96px 96px;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(6rem);
+}
+
+/* HEADER SECTION */
+
+.header-flex {
+  /* Using 1 / -1 for the sections that should span full page width,
+     this way i don't have to set another value for grid-column for smaller screen */
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+.header-flex h1 {
+  font-size: 1.6rem;
+  padding: 8px 18px;
+  font-style: italic;
+}
+
+.nav-bar {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+.nav-fixed {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--fixed-nav-background-color);
+  border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-bar a:link,
+.nav-bar a:visited {
+  padding: 6px 12px;
+  border-radius: var(--main-border-radius);
+  display: inline-block;
+  transition: all 400ms ease;
+}
+.nav-bar a:hover,
+.nav-bar a:active {
+  color: var(--main-background-color);
+  background-color: var(--main-color);
+}
+
+.nav-open a:link,
+.nav-open a:visited {
+  color: var(--main-background-color);
+  background-color: var(--main-color);
+}
+
+/* PROFILE SECTION */
+.profile-picture-section {
+  grid-column: 1; /* As it should only span 1 column it is enough to write start line */
+  width: 100%; /* Making extra sure this div is as big as the grid cell as it has no content, only pic as background */
+  height: 100%;
+  background-image: url('../img/profile_image.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--main-border-radius);
+}
+
+.profile-text-section {
+  grid-column: 2; /* See comment in .profile-picture-section */
+  padding: 1.5rem;
+  border-radius: var(--main-border-radius);
+  background-color: var(--main-color);
+  color: var(--main-background-color);
+}
+
+.profile-text-section h2 {
+  margin-bottom: 0.6rem;
+}
+
+.profile-text-section p {
+  line-height: 1.5;
+}
+
+/* PROJECT SECTION */
+.project-section {
+  grid-column: 1 / -1;
+}
+
+.section-header {
+  margin-bottom: 1rem;
+  color: var(--main-color);
+}
+
+.project-cards {
+  display: grid;
+  column-gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.project-cards a:link,
+.project-cards a:visited {
+  color: var(--main-text-color);
+}
+.project-card {
+  background-color: var(--secondary-background-color);
+  border-radius: var(--main-border-radius);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+  transition: all 500ms ease;
+  height: 100%;
+}
+.project-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 24px 24px rgba(0, 0, 0, 0.1);
+}
+
+.project-img {
+  width: 100%;
+  border-radius: var(--main-border-radius);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid var(--secondary-background-color);
+}
+
+.project-text {
+  padding: 0.8rem;
+}
+
+.project-text h3 {
+  margin-bottom: 0.5rem;
+}
+
+.project-text p {
+  line-height: 1.5;
+}
+
+.resume-section,
+.contact-section {
+  padding-top: 48px;
+  margin-top: 24px;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.resume-section,
+.contact-section,
+.project-section {
+  transition: opacity 1s, transform 1s;
+}
+
+/* Resume section */
+
+.resume-article {
+  width: 80%;
+  background-color: var(--main-background-color);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  padding: 2rem;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.resume-article hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+#resume-title {
+  font-style: italic;
+}
+
+.resume-article h3 {
+  background-color: var(--main-text-color);
+  color: var(--main-background-color);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.resume-article ul {
+  margin-left: 1.5rem;
+}
+
+.resume-sub-section {
+  margin: 1.5rem 0;
+}
+
+.resume-sub-section:nth-child(2) {
+  margin-top: 0;
+}
+
+.resume-sub-section:last-child {
+  margin-bottom: 0;
+}
+
+.summary-text {
+  margin-bottom: 0.4rem;
+}
+
+.job-duration {
+  font-style: italic;
+}
+
+.education-list,
+.role-list {
+  margin-bottom: 0.8rem;
+}
+
+.education-list li,
+.role-list li {
+  margin: 0.5rem 0;
+}
+
+.education-description-list,
+.role-description-list li {
+  margin: 0.4rem 0;
+}
+
+.education-title,
+.education-duration,
+.role-title,
+.role-duration {
+  line-height: 1.2;
+}
+.education-title,
+.role-title {
+  font-weight: bold;
+}
+.education-duration,
+.role-duration {
+  font-size: 0.9em;
+  font-style: italic;
+  margin-bottom: 0.2em;
+}
+
+.skill-list li {
+  margin: 0.25rem 0;
+}
+
+/* Contact section */
+
+.contact-container {
+  width: 100%;
+  background-color: var(--main-background-color);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  border-radius: var(--main-border-radius);
+  padding: 2rem;
+}
+.contact-container h2 {
+  margin-bottom: 0.5rem;
+}
+.karlskoga-map {
+  margin-top: 1rem;
+  width: 100%;
+  height: 40vh;
+  max-height: 390px;
+  border: none;
+  border-radius: var(--main-border-radius);
+}
+
+/* FOOTER SECTION */
+
+.footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  text-align: center;
+}
+
+.footer a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 200ms linear;
+}
+
+.footer a:hover,
+.footer a:active {
+  background-color: var(--main-color);
+}
+
+.footer-icon {
+  width: 28px;
+  height: 28px;
+  /* stroke: var(--main-color); */
+  fill: var(--main-color);
+  transition: fill 200ms linear;
+}
+
+.footer a:hover .footer-icon,
+.footer a:active .footer-icon {
+  fill: var(--main-background-color);
+}
+
+/* ///////////////////////////////////////////////////// */
+/* //////////////// MEDIA QUERY SECTION //////////////// */
+/* ///////////////////////////////////////////////////// */
+
+/* The media breakpoints are set where my page naturally "breaks" when resizing  instead
+   of following some set values, this is according to codecademy Intermediate CSS course */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: #adb5bd;
+    --main-background-color: #212529;
+    --secondary-background-color: #495057;
+    --main-text-color: #f1f3f5;
+    --fixed-nav-background-color: rgba(52, 58, 64, 0.8);
+  }
+
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url('../img/tile-neutral.png');
+  }
+
+  .profile-picture-section {
+    background-image: url('../img/profile_image_dark.webp');
+  }
+
+  .profile-text-section,
+  .resume-article,
+  .contact-container {
+    background-color: var(--secondary-background-color);
+    color: var(--main-text-color);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    width: 88vw;
+  }
+  .resume-article {
+    width: 90%;
+  }
+
+  .karlskoga-map {
+    height: 35vh;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    width: 94vw;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    margin: 0 auto;
+
+    background-size: 80px 80px;
+  }
+
+  /* HEADER SECTION */
+  .header-flex {
+    flex-direction: column;
+  }
+
+  .nav-bar {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  /* PROFILE SECTION */
+  .profile-picture-section {
+    grid-column: 1;
+    width: 100%;
+    height: 280px;
+  }
+
+  .profile-text-section {
+    grid-column: 1;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .project-text p {
+    line-height: 1.2;
+  }
+
+  /* /////////////////////// */
+  /* /// RESUME SPECIFIC /// */
+  /* /////////////////////// */
+
+  .resume-article {
+    width: 100%;
+    padding: 1rem;
+    font-size: 15px;
+  }
+
+  /* /////////////////////// */
+  /* /// CONTACT SPECIFIC /// */
+  /* /////////////////////// */
+
+  .karlskoga-map {
+    height: 30vh;
+  }
+}

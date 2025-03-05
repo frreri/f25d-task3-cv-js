@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Fredrik Erikssons Portfolio Site" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Removed defer from script, as type module autmatically defers -->
+    <script type="module" src="./script/main.js"></script>
+    <title>Portfolio Site</title>
+  </head>
+  <body>
+    <header id="home" class="header-flex">
+      <a href="#home"><h1>Fredrik Eriksson</h1></a>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="profile-picture-section"></div>
+    <section class="profile-text-section">
+      <h2>Hello, I'm Fredrik!</h2>
+      <p>
+        After working at the same company for 10 years with everything from
+        customer service and employee training to testing and quality assurance
+        in development projects, I've decided to follow my dream of becoming a
+        developer myself.
+        <br />
+        <br />
+        I'm currently studying Frontend Development with a focus on React at
+        Yrkeshögskolan i Borås.
+      </p>
+    </section>
+    <section class="project-section">
+      <h2 class="section-header">Projects</h2>
+      <div class="project-cards">
+        <a href="https://github.com/frreri/loginpage-test" target="_blank">
+          <article class="project-card">
+            <img
+              class="project-img"
+              src="img/login_page.webp"
+              alt="login page project"
+            />
+            <div class="project-text">
+              <h3>Login Page</h3>
+              <p>
+                A simple login page project that I made as part of a course in
+                HTML, CSS and JavaScript basics.
+              </p>
+            </div>
+          </article>
+        </a>
+        <a
+          href="https://github.com/frreri/responsive-navbar-js"
+          target="_blank"
+        >
+          <article class="project-card">
+            <img
+              class="project-img"
+              src="img/burger_menu.webp"
+              alt="repsonsive navbar project"
+            />
+            <div class="project-text">
+              <h3>Responsive Nav</h3>
+              <p>
+                My own version of a responsive navigation bar that utilizes
+                javascript and media queries.
+              </p>
+            </div>
+          </article>
+        </a>
+        <a href="https://github.com/frreri/DraggableWindows" target="_blank">
+          <article class="project-card">
+            <img
+              class="project-img"
+              src="img/draggable_windows.webp"
+              alt="draggable windows project"
+            />
+            <div class="project-text">
+              <h3>Mock Desktop</h3>
+              <p>
+                A small project I made to play around and practice JavaScript.
+                You can open, close and drag around windows.
+              </p>
+            </div>
+          </article>
+        </a>
+        <a href="https://github.com/frreri/js-tetris" target="_blank">
+          <article class="project-card">
+            <img
+              class="project-img"
+              src="img/tetris_game.webp"
+              alt="tetris game"
+            />
+            <div class="project-text">
+              <h3>Tetris in JS</h3>
+              <p>
+                A learning project I did a few years ago following a tutorial. A
+                functioning tetris game with some own modifications.
+              </p>
+            </div>
+          </article>
+        </a>
+      </div>
+    </section>
+
+    <section id="resume" class="resume-section">
+      <h2 class="section-header">Resume</h2>
+      <article class="resume-article">
+        <h2 id="resume-name">Error loading JSON-data</h2>
+        <p id="resume-title"></p>
+        <section class="resume-sub-section">
+          <h3>Summary</h3>
+          <p id="resume-summary" class="summary-text"></p>
+        </section>
+
+        <section class="resume-sub-section">
+          <h3>Professional Experience</h3>
+          <div id="jobs-container"></div>
+        </section>
+
+        <section class="resume-sub-section">
+          <h3>Education</h3>
+          <div id="education-container"></div>
+        </section>
+
+        <section class="resume-sub-section">
+          <h3>Key Skills</h3>
+          <ul id="skill-list" class="skill-list"></ul>
+        </section>
+      </article>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2 class="section-header">Contact</h2>
+      <div class="contact-container">
+        <h2>Contact information</h2>
+        <p>Phone: +4673XXXXXXX</p>
+        <p>Email: placeholder@placeholder.com</p>
+        <p>Location: Karlskoga, Sweden</p>
+        <iframe
+          title="Karlskoga on a map"
+          class="karlskoga-map"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=13.370361328125002%2C59.0243021085329%2C15.663757324218752%2C59.624019665309596&amp;layer=mapnik&amp;marker=59.32548371429322%2C14.517059326171875"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="https://github.com/frreri" target="_blank">
+        <!-- Using SVG icons partly for fun, partly for reducing numer of external stylesheets for visitors to download -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 496 512"
+          class="footer-icon"
+        >
+          <title>Github</title>
+          <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+          <path
+            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+          />
+        </svg>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/fredrik-eriksson-dev/"
+        target="_blank"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+          class="footer-icon"
+        >
+          <title>Linkedin</title>
+          <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+          <path
+            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+          />
+        </svg>
+      </a>
+      <a href="mailto:mailto:fake_mail@not-real.com">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          class="footer-icon"
+        >
+          <title>Email</title>
+          <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+          <path
+            d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+          />
+        </svg>
+      </a>
+    </footer>
+  </body>
+</html>
