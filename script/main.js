@@ -7,7 +7,7 @@ const resumeSection = document.querySelector('.resume-section');
 const contactSection = document.querySelector('.contact-section');
 const hiddenSections = [projectSection, resumeSection, contactSection];
 
-// Importing and running my resume script - Written by myself
+// Importing and running my resume script
 import { generateResume } from './resume.js';
 generateResume('./data/resume.json');
 
@@ -16,7 +16,11 @@ generateResume('./data/resume.json');
 import { setIntersectionObservers } from './intersection.js';
 setIntersectionObservers(navBar, profileSection, hiddenSections);
 
-// Implementing smooth scrolling nav - Written by myself
+// Importing and running my github script
+import { createGithubSlider } from './githubProjects.js';
+createGithubSlider();
+
+// Implementing smooth scrolling nav
 // setting event listener on navbar, instead of having one for each button
 navBar.addEventListener('click', e => {
   // prevent normal link click behavior

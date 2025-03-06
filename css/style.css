@@ -181,6 +181,116 @@ a:visited {
   line-height: 1.5;
 }
 
+/* Github projects slider START */
+
+.github-projects-header {
+  color: var(--main-color);
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.project-slider {
+  width: 50%;
+  height: 11rem;
+  margin: 0 auto;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.project-slider-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  background-color: var(--main-color);
+  color: var(--main-background-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+}
+
+.project-slider-btn--left {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.project-slider-btn--right {
+  right: 0;
+  transform: translateY(-50%);
+}
+.project-slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 800ms;
+}
+
+.project-slide-content {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: var(--main-border-radius);
+  background-color: var(--secondary-background-color);
+}
+
+.project-slide-content p {
+  margin: 8px 0;
+}
+
+.project-link-btn {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  background-color: var(--main-color);
+  font-weight: bold;
+  /* margin-top: 0.5rem; */
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--main-border-radius);
+}
+.project-link-btn:visited,
+.project-link-btn:link {
+  color: var(--main-background-color);
+}
+
+.loading-anim {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.loading-anim .dot {
+  animation: load-anim 1s linear infinite;
+}
+
+.loading-hidden {
+  display: none;
+}
+
+@keyframes load-anim {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Github projects slider END */
+
 .resume-section,
 .contact-section {
   padding-top: 48px;
@@ -397,6 +507,10 @@ a:visited {
   body {
     width: 94vw;
   }
+
+  .project-slider {
+    width: 60%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -448,6 +562,11 @@ a:visited {
 
   .project-text p {
     line-height: 1.2;
+  }
+
+  .project-slider {
+    width: 100%;
+    height: 12.5rem;
   }
 
   /* /////////////////////// */
