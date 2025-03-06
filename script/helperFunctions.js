@@ -1,5 +1,6 @@
 'use strict';
 
+// functions here Written by myself
 // Separated these functions into their own file from resume.js to be able to use them if/when i implement github interaction
 const getJsonData = async path => {
   try {
