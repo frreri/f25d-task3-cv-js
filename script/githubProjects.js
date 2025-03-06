@@ -9,7 +9,11 @@ const createGithubSlider = async () => {
 
   const projContainer = document.querySelector('.project-slider');
 
+  let repoNum = 0;
+
   gitHubRepos.forEach(repo => {
+    repoNum++;
+
     const projSlide = createElement('div', 'project-slide');
 
     const projContent = createElement('div', 'project-slide-content');
@@ -26,6 +30,10 @@ const createGithubSlider = async () => {
         createElement('p', null, `Primary language: ${repo.language}`)
       );
     }
+
+    projContent.append(
+      createElement('span', 'slide-num', `${repoNum}/${gitHubRepos.length}`)
+    );
 
     const projLink = createElement('a', 'project-link-btn', 'Go to Github');
     projLink.href = repo.html_url;
