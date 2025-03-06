@@ -15,6 +15,9 @@ This time I have added javascript to make the page more interactive and dynamic.
 - I have also optimized pictures used to be in the webp format so there is less data to download
 
 
+The site gets full score in Google Chromes builtin Lighthouse:
+
+![Image](https://github.com/user-attachments/assets/2547de2b-310a-44b8-a535-1da6acd1e1fd)
 
 
 ###### The HTML validates with no errors or warnings at validator.w3.org (there are some info messages regarding the traling slash /> on self closing tags that Prettier adds that i found annoying, but i learned that it isn't a problem and just info in case they were used for the wrong reason. Even code examples at MDN web docs use the trailing slashes and Prettier as formatter)
