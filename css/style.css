@@ -557,6 +557,7 @@ a:visited {
 
   .header-flex {
     flex-direction: column;
+    height: 114px;
   }
 
   .nav-bar {
