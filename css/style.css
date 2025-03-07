@@ -78,7 +78,6 @@ a:visited {
   z-index: 5;
   top: 0;
   right: 0;
-  /* transform: translateX(-50%); */
   background-color: var(--fixed-nav-background-color);
   border-radius: 0 0 0 var(--main-border-radius);
 }
@@ -182,8 +181,6 @@ a:visited {
   line-height: 1.5;
 }
 
-/* Github projects slider START */
-
 .github-projects-header {
   color: var(--main-color);
   text-align: center;
@@ -278,7 +275,6 @@ a:visited {
   cursor: pointer;
   background-color: var(--main-color);
   font-weight: bold;
-  /* margin-top: 0.5rem; */
   display: inline-block;
   padding: 0.4rem 0.8rem;
   border-radius: var(--main-border-radius);
@@ -327,8 +323,6 @@ a:visited {
     opacity: 0;
   }
 }
-
-/* Github projects slider END */
 
 .resume-section,
 .contact-section {
@@ -485,7 +479,6 @@ a:visited {
 .footer-icon {
   width: 28px;
   height: 28px;
-  /* stroke: var(--main-color); */
   fill: var(--main-color);
   transition: fill 200ms linear;
 }
@@ -562,7 +555,6 @@ a:visited {
     background-size: 80px 80px;
   }
 
-  /* HEADER SECTION */
   .header-flex {
     flex-direction: column;
   }
@@ -584,7 +576,6 @@ a:visited {
     border-radius: 0 0 var(--main-border-radius) var(--main-border-radius);
   }
 
-  /* PROFILE SECTION */
   .profile-picture-section {
     grid-column: 1;
     width: 100%;
@@ -608,19 +599,11 @@ a:visited {
     width: 100%;
   }
 
-  /* /////////////////////// */
-  /* /// RESUME SPECIFIC /// */
-  /* /////////////////////// */
-
   .resume-article {
     width: 100%;
     padding: 1rem;
     font-size: 15px;
   }
-
-  /* /////////////////////// */
-  /* /// CONTACT SPECIFIC /// */
-  /* /////////////////////// */
 
   .karlskoga-map {
     height: 30vh;
